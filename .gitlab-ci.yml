@@ -1,0 +1,18 @@
+stages:
+  - deploy
+  
+deploy_dev:
+  stage: deploy
+  script:
+    - echo "deploy code in DEV code..."'
+  only:
+    - DEV
+    
+deploy_test:
+  stage: deploy
+  script:
+    - echo "deploy code in TEST code"
+  only:
+    - TEST
+  when: manual
+  
